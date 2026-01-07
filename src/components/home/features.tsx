@@ -17,8 +17,8 @@ export function Features() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
                     {/* Left Column */}
                     <div className="space-y-12">
-                        <div className="text-right group">
-                            <div className="mb-4 flex justify-end">
+                        <div className="text-center md:text-right group">
+                            <div className="mb-4 flex justify-center md:justify-end">
                                 <div className="p-3 rounded-full bg-[#F5F5F7] group-hover:bg-black group-hover:text-white transition-colors">
                                     <Feather className="w-6 h-6" />
                                 </div>
@@ -28,8 +28,8 @@ export function Features() {
                                 Engineered with phantom-knits that feel weightless on your feet, allowing you to move with Koko-like agility.
                             </p>
                         </div>
-                        <div className="text-right group">
-                            <div className="mb-4 flex justify-end">
+                        <div className="text-center md:text-right group">
+                            <div className="mb-4 flex justify-center md:justify-end">
                                 <div className="p-3 rounded-full bg-[#F5F5F7] group-hover:bg-black group-hover:text-white transition-colors">
                                     <ShieldCheck className="w-6 h-6" />
                                 </div>
@@ -54,8 +54,8 @@ export function Features() {
 
                     {/* Right Column */}
                     <div className="space-y-12">
-                        <div className="text-left group">
-                            <div className="mb-4">
+                        <div className="text-center md:text-left group">
+                            <div className="mb-4 flex justify-center md:justify-start">
                                 <div className="p-3 w-fit rounded-full bg-[#F5F5F7] group-hover:bg-black group-hover:text-white transition-colors">
                                     <Zap className="w-6 h-6" />
                                 </div>
@@ -65,8 +65,8 @@ export function Features() {
                                 Our proprietary Koko-Sole technology returns energy with every step, keeping you moving forward effortlessly.
                             </p>
                         </div>
-                        <div className="text-left group">
-                            <div className="mb-4">
+                        <div className="text-center md:text-left group">
+                            <div className="mb-4 flex justify-center md:justify-start">
                                 <div className="p-3 w-fit rounded-full bg-[#F5F5F7] group-hover:bg-black group-hover:text-white transition-colors">
                                     <Footprints className="w-6 h-6" />
                                 </div>

@@ -35,6 +35,7 @@ import {
     ResponsiveContainer,
     Legend,
 } from "recharts";
+import { AlertTriangle } from "lucide-react";
 
 const COLORS = ["#4F46E5", "#10B981", "#F59E0B", "#EF4444", "#8B5CF6"];
 
@@ -51,29 +52,14 @@ export default function AnalyticsPage() {
                 </p>
             </div>
 
-            {/* Mock Data Warning */}
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex items-start gap-3">
                 <div className="text-amber-600 mt-0.5">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-5 w-5"
-                    >
-                        <circle cx="12" cy="12" r="10" />
-                        <line x1="12" y1="8" x2="12" y2="12" />
-                        <line x1="12" y1="16" x2="12.01" y2="16" />
-                    </svg>
+                    <AlertTriangle className="h-5 w-5" />
                 </div>
                 <div>
-                    <h4 className="font-semibold text-amber-900">Demo Analytics Data</h4>
-                    <p className="text-sm text-amber-800 mt-1">
-                        These charts use static mock data for demonstration purposes.
-                        They are not connected to the live database to preserve historical trend visualization tailored for this portfolio showcase.
+                    <h4 className="font-semibold text-amber-900">Note</h4>
+                    <p className="text-sm text-amber-800 mt-1 leading-relaxed">
+                        These charts use sample data so you can see the full trends right away, It makes for a much better demonstration of the data visualization.
                     </p>
                 </div>
             </div>

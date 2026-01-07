@@ -21,8 +21,8 @@ export default function AdminLayout({
     return (
         <div className="min-h-screen bg-background">
             <AdminSidebar />
-            {/* Main content area - offset by sidebar width */}
-            <main className="ml-64 min-h-screen">
+            {/* Main content area - offset by sidebar width on desktop */}
+            <main className="lg:ml-64 min-h-screen">
                 <div className="p-8">
                     {children}
                 </div>

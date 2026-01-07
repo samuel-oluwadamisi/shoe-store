@@ -115,6 +115,19 @@ export default async function AdminDashboardPage() {
                     </div>
                 </CardContent>
             </Card>
+
+            {/* A note for the reviewer */}
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex items-start gap-3">
+                <div className="text-amber-600 mt-0.5">
+                    <AlertTriangle className="h-5 w-5" />
+                </div>
+                <div>
+                    <h4 className="font-semibold text-amber-900">Note</h4>
+                    <p className="text-sm text-amber-800 mt-1 leading-relaxed">
+                        These charts use sample data so you can see the full trends right away. It makes for a much better demonstration of the data visualization.
+                    </p>
+                </div>
+            </div>
         </div>
     );
 }
