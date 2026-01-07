@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KOKO Walkers 👟
 
-## Getting Started
+A premium, high-performance e-commerce prototype for custom footwear. Built with a "recruiters-first" mindset, focusing on visual excellence, buttery-smooth transitions, and state-of-the-art perceived performance.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Instant SSR Hydration**: Zero-flicker transitions using Next.js Server Components prefetched into TanStack React Query `initialData`.
+- **High-Performance Navigation**: Optimized App Router transitions with a custom "KOKO" loading sequence.
+- **Admin Dashboard**: Full CRUD management for products, users, and orders, directly linked to a consolidated MongoDB database.
+- **Hybrid Data Strategy**:
+  - **Home Page**: Lightning-fast static data source.
+  - **Shop & Admin**: Live dynamic data with intelligent caching.
+- **Visual Polish**:
+  - Tailwind CSS v4 design system.
+  - Framer Motion micro-interactions.
+  - Smooth site-wide scrolling and premium typography (Syne & Inter).
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Database**: MongoDB with Mongoose
+- **State Management**: TanStack React Query v5
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Notifications**: Sonner
+
+## 📦 Getting Started
+
+### 1. Environment Setup
+Create a `.env.local` file in the root:
+```env
+MONGODB_URI=your_mongodb_connection_string
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Initialize Database
+Consolidate and seed the database with the optimized product collection:
+```bash
+npx tsx src/scripts/cleanup-db.ts
+npx tsx src/scripts/seed.ts
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run Development Server
+```bash
+npm run dev
+```
 
-## Learn More
+## 🏗 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app`: Next.js App Router (Pages & API)
+- `src/components`: Reusable UI components & Layouts
+- `src/data`: Static product & configuration data
+- `src/hooks`: Custom React hooks (React Query integrations)
+- `src/models`: Mongoose database schemas
+- `src/scripts`: Database maintenance & seeding tools
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💎 Performance Audit
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Metric | Result |
+| :--- | :--- |
+| **Initial LCP** | Prefetched & Server-Rendered |
+| **Nav Latency** | Optimized (400ms transition cap) |
+| **Hydration** | Instant via `initialData` |
+| **UX Feel** | Premium/Buttery |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Crafted with attention to detail for recruitment assessment.*
