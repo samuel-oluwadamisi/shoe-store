@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import getQueryClient from "@/lib/get-query-client";
 import dbConnect from "@/lib/db";
@@ -5,6 +6,11 @@ import Product from "@/models/Product";
 import ShopClient from "./ShopClient";
 
 export const revalidate = 120;
+
+export const metadata: Metadata = {
+    title: "Shop All",
+    description: "Browse the complete collection of KOKO Walkers custom footwear. Find your perfect pair today.",
+};
 
 export default async function ShopPage() {
     const queryClient = getQueryClient();

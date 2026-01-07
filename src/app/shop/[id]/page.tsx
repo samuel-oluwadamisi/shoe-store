@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import getQueryClient from "@/lib/get-query-client";
 import dbConnect from "@/lib/db";
@@ -11,6 +12,28 @@ export const revalidate = 3600; // 1 hour
 
 interface Props {
     params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { id } = await params;
+    await dbConnect();
+    const product = await Product.findById(id).lean();
+
+    if (!product) {
+        return {
+            title: "Product Not Found",
+        };
+    }
+
+    return {
+        title: product.name,
+        description: product.description,
+        openGraph: {
+            title: `${product.name} | KOKO Walkers`,
+            description: product.description,
+            images: product.images?.[0] ? [{ url: product.images[0] }] : [],
+        },
+    };
 }
 
 export default async function ProductDetailPage({ params }: Props) {

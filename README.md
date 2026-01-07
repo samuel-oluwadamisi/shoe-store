@@ -59,13 +59,38 @@ npm run dev
 - `src/models`: Mongoose database schemas
 - `src/scripts`: Database maintenance & seeding tools
 
+## 🏗 Architecture & Data Flow
+
+The application employs a sophisticated data strategy to balance performance and dynamism:
+
+```mermaid
+graph TD
+    A[User] --> B{Page Request}
+    B -- Home --> C[Static Data Source]
+    B -- Shop/Admin --> D[Server-Side Prefetch]
+    D --> E[MongoDB]
+    E --> F[React Query Hydration]
+    F --> G[Instant Client UI]
+    C --> H[Instant Render]
+```
+
+## 🔍 SEO & Metadata
+- **Dynamic SEO**: Every product detail page generates its own metadata (title, description, and images) dynamically from the database using Next.js `generateMetadata`.
+- **OpenGraph**: Fully configured for social media sharing with premium branded icons.
+- **Brand Consistency**: A unified title template ensures every page identifies with the KOKO Walkers brand.
+
+## 🛠 Admin & Management
+The project includes a robust administrative layer for content management:
+- **Routes**: Access via `/admin` to manage inventory, view orders, and monitor users.
+- **Safety Tools**: Included scripts like `cleanup-db.ts` ensure the database remains lean by automatically pruning redundant legacy collections.
+
 ## 💎 Performance Audit
 
 | Metric | Result |
 | :--- | :--- |
 | **Initial LCP** | Prefetched & Server-Rendered |
 | **Nav Latency** | Optimized (400ms transition cap) |
-| **Hydration** | Instant via `initialData` |
+| **Hydration** | Instant via `initialData` synergy |
 | **UX Feel** | Premium/Buttery |
 
 ---

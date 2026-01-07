@@ -19,8 +19,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Custom Shoe Store",
-  description: "Premium custom footwear",
+  title: {
+    default: "KOKO Walkers | Premium Custom Footwear",
+    template: "%s | KOKO Walkers"
+  },
+  description: "Experience the pinnacle of custom footwear. Luxury designs, unparalleled comfort, and sustainable craftsmanship by KOKO Walkers.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-icon.png",
+  },
+  keywords: ["custom shoes", "luxury sneakers", "KOKO Walkers", "premium footwear", "handcrafted shoes"],
+  authors: [{ name: "KOKO Team" }],
+  openGraph: {
+    title: "KOKO Walkers | Premium Custom Footwear",
+    description: "Experience the pinnacle of custom footwear. Luxury designs, unparalleled comfort, and sustainable craftsmanship.",
+    type: "website",
+    siteName: "KOKO Walkers",
+  }
 };
 
 export default function RootLayout({
